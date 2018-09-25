@@ -10,7 +10,8 @@ from bs4 import BeautifulSoup as bs
 import pandas as pd
 import os
 
-
+#WARNING DO NOT RUN without Adequate Storage, Bandwidth, and a High Data Limit
+#A full year (2018) download is estimated at 200 GB
 
 def image_request(url):
     url_split = url.split('/')
@@ -40,7 +41,7 @@ def image_request(url):
             
                 with open(directory + image_name, "wb") as f:
                         f.write(r2.content)
-                print("Completed: " + url)
+        print("Completed: " + url)
     else:
         print("Skipped: " +url)
 
