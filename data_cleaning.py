@@ -68,7 +68,7 @@ fname = "raw_tick_data.csv"
 df = load_data(fname)
 df = rename_columns(df)
 df = data_cleanup(df)
-df.to_csv('cleaned_tick_data.csv',index=False)
+df.to_csv('cleaned_tick_data.csv', encoding='utf-8')
 
 
 
